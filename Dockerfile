@@ -1,9 +1,8 @@
 FROM ubuntu:latest
 # 
 #
-ENV http_proxy http://172.20.52.200:3128
-ENV https_proxy httpis://172.20.52.200:3128
-ä
+#ENV http_proxy http://172.20.52.200:3128
+#ENV https_proxy httpis://172.20.52.200:3128
 #Define the ENV variable
 ENV nginx_vhost /etc/nginx/sites-available/default
 ENV php_conf /etc/php/7.0/fpm/php.ini
