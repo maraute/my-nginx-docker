@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 # 
-ENV https_proxy https://172.20.52.200:3128
-ENV http_proxy http://172.20.52.200:3128S
+#ENV https_proxy https://172.20.52.200:3128
+#ENV http_proxy http://172.20.52.200:3128S
 #
 #Define the ENV variable
 ENV nginx_vhost /etc/nginx/sites-available/default
