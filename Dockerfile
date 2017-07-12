@@ -29,6 +29,7 @@ RUN mkdir -p /run/php && \
     chown -R www-data:www-data /run/php
 
 COPY index.html  /var/www/html
+COPY vodafone.jpg  /var/www/html
 
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
