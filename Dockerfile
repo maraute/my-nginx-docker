@@ -30,6 +30,8 @@ RUN mkdir -p /run/php && \
 
 COPY index.html  /var/www/html
 COPY vodafone.jpg  /var/www/html
+COPY samsung.jpg  /var/www/html
+COPY huawai.jpg  /var/www/html
 
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
