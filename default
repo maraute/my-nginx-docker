@@ -15,6 +15,13 @@ server {
         fastcgi_param SCRIPT_FILENAME /var/www/html/$fastcgi_script_name;
         fastcgi_pass 127.0.0.1:9000;
     }
+     location ~ \.(php|html|htm)$ {
+     root           html;
+     include snippets/fastcgi-php.conf;
+     fastcgi_pass  127.0.0.1:9000;
+     fastcgi_index  index.html;
+     fastcgi_param  SCRIPT_FILENAME /var/www/html/$fastcgi_script_name;
+}
  
     # deny access to .htaccess files, if Apache's document root
     # concurs with nginx's one
