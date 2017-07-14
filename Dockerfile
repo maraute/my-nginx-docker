@@ -20,7 +20,7 @@ RUN apt-get install -y nginx php7.0-fpm supervisor && \
 COPY default ${nginx_vhost}
 RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
     echo "\ndaemon off;" >> ${nginx_conf}
-RUN sed -i -e 's/;listen = \/run\/php\/php7.0-fpm.sock/listen = 127.0.0.1:9000/'  ${fpm_www_conf}
+RUN sed -i -e 's/listen = \/run\/php\/php7.0-fpm.sock/listen = 127.0.0.1:9000/'  ${fpm_www_conf}
 
 #Copy supervisor configuration
 COPY supervisord.conf ${supervisor_conf}
