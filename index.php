@@ -8,7 +8,7 @@
 phpinfo(INFO_MODULES);
 
 $redis = new Redis();
-$redis->pconnect('redis', 6379);
+$redis->connect('', 6379);
 echo "Visits so far: " . $redis->rPush('visits', date(DATE_ISO8601, time()));
 
 ?>
